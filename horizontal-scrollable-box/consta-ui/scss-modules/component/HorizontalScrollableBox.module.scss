@@ -1,0 +1,52 @@
+.wrapper {
+  position: relative;
+  padding: 3px;
+  margin: -3px;
+  overflow: hidden;
+
+  &:not(:last-child) {
+    margin-bottom: 20px;
+  }
+}
+
+.scrollableContainer {
+  overflow-x: auto;
+
+  /* Скрываем scrollbar для IE, Edge и Firefox */
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+
+  /* Скрываем scrollbar для Chrome, Safari и Opera */
+  &::-webkit-scrollbar {
+    display: none;
+  }
+}
+
+.button {
+  position: absolute;
+  top: 3px;
+  background-color: #fff;
+  animation: show-up 0.25s;
+
+  &:hover {
+    background-color: #fff;
+  }
+}
+
+.buttonRight {
+  right: 3px;
+}
+
+.buttonLeft {
+  left: 3px;
+}
+
+@keyframes show-up {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
